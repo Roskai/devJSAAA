@@ -1,4 +1,5 @@
 var tabDpt = new Array();
+var tabPref = new Array();
 function initialiserTableau (){
 	tabDpt["Dordogne"]="Aquitaine"
 	tabDpt["Landes"]="Aquitaine"
