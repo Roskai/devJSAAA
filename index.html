@@ -3,38 +3,18 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript">
-      function getTauxAlcoolémie(lePoids, leSexe, leDegreEntier, leNombreVerres) {
-        let tauxAlcool = (  leNombreVerres * 100*(leDegreEntier * 0.01)*0.8) / (lePoids * (leSexe === "M" ? 0.7 : 0.6));
-        return tauxAlcool;
-      }
-      function generateTable() {
-        let leDegres = document.getElementById("deg").value
-        let lePoids = document.getElementById("poids").value
-        let leSexe = document.getElementById('sexe').value;
-        let table = "<tr><th>Nombre de verres</th><th>Taux d'alcoolémie</th></tr>"
-        for (let i = 1; i <= 10; i++) {
-          let tauxAlcool = getTauxAlcoolémie(lePoids, leSexe, leDegres, i);
-          table += "<tr><td>" + i + "</td><td>" + tauxAlcool + "</td></tr>";
-        }
-        table += "</table>";
-        let tableau = document.getElementById('tableeau')
-        tableau.innerHTML = table
-      }
 
 
     </script>
     <title>Yay</title>
   </head>
   <body>
-    <h2>Poids : <input type="number" size="3" id="poids" name="poids"/></h2>
-    <h2>Sexe : <select id="sexe" name="sexe">
-      <option value="F">Femme</option>
-      <option value="M">Homme</option>
-    </select>
-    <h2>Degré : <input type="number" size="3" id="deg" name="deg"/></h2>
-    <button type="button"  onclick="generateTable();">Valider</button>
-    <div >
-      <table id="tableeau"></table>
-    </div>
+    <li>
+      <a href="./application3/frmreservation.html">Application3</a>
+    </li>
+    <li> <a href="application2/lexiqueAjax.html"> Application2</a> </li>
+    <li>
+      <a href="REACT/index.html">React</a>
+    </li>
   </body>
 </html>

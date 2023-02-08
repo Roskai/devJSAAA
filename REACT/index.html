@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>premier affichage avec REACT</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+</head>
+
+<body>
+  <div id="app">
+
+  </div>
+
+</body>
+<script>
+  let p = React.createElement("p",{id:"Paragraph", className : "rouge"},"Bonjour les L3")
+  let tabMonument = ["Le Louvre", "Sacré cœur", "Moulin rouge", "Notre Dame", "Orsay"]
+  let ul = React.createElement("ul", null,[
+      tabMonument.map((item,index)=>{
+        return React.createElement("li",{key:index},item);
+      })
+  ]
+
+  )
+  console.log(p);
+  console.log(ul);
+
+  ReactDOM.render(ul,document.getElementById("app"))
+</script>
+</html>
